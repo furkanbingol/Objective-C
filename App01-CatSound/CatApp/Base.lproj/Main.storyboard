@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-8c-Zzb">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meow!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yAR-1r-HpR">
+                                <rect key="frame" x="22" y="59" width="348" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="eq3-Ta-bwS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PB5-9P-4cV">
+                                <rect key="frame" x="29" y="409" width="335" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="S0a-8b-H3q"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="cat">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                </state>
+                                <connections>
+                                    <action selector="catButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HNa-Js-KWp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZtB-8c-Zzb" secondAttribute="bottom" id="98f-fJ-bdE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yAR-1r-HpR" secondAttribute="trailing" constant="23" id="CMq-ow-80y"/>
+                            <constraint firstItem="yAR-1r-HpR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NBg-TL-i3t"/>
+                            <constraint firstItem="ZtB-8c-Zzb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vq0-zy-IaS"/>
+                            <constraint firstItem="yAR-1r-HpR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="a8n-1b-5oG"/>
+                            <constraint firstItem="PB5-9P-4cV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="fNZ-Ro-8v2"/>
+                            <constraint firstItem="ZtB-8c-Zzb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fWq-9f-SZW"/>
+                            <constraint firstItem="ZtB-8c-Zzb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iYh-b9-Ati"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PB5-9P-4cV" secondAttribute="bottom" constant="59" id="sIC-ub-dlP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PB5-9P-4cV" secondAttribute="trailing" constant="29" id="t55-W1-5Yk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catButton" destination="PB5-9P-4cV" id="Xgi-GR-J40"/>
+                        <outlet property="meowLabel" destination="yAR-1r-HpR" id="wSl-vL-qOU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="2560" height="1600"/>
+        <image name="cat" width="900" height="978"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
