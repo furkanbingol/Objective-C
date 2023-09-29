@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="American Captain.otf">
+            <string>AmericanCaptain</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="UWA-Hh-jRH">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll the Dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="1kJ-N6-Ump">
+                                <rect key="frame" x="16" y="79" width="361" height="126.66666666666669"/>
+                                <fontDescription key="fontDescription" name="AmericanCaptain" family="American Captain" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdZ-oC-Vw7">
+                                <rect key="frame" x="66" y="607.66666666666663" width="261" height="126.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Roll">
+                                    <fontDescription key="titleFontDescription" name="AmericanCaptain" family="American Captain" pointSize="50"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Noc-C4-gUl"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="b8W-Sv-IPE">
+                                <rect key="frame" x="46" y="213.66666666666663" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="b8W-Sv-IPE" secondAttribute="height" multiplier="1:1" id="Zit-rY-NKA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1kJ-N6-Ump" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3y8-QN-6BX"/>
+                            <constraint firstItem="bdZ-oC-Vw7" firstAttribute="height" secondItem="1kJ-N6-Ump" secondAttribute="height" id="7P4-qU-J1Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bdZ-oC-Vw7" secondAttribute="trailing" constant="66" id="BYy-h2-3wz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1kJ-N6-Ump" secondAttribute="trailing" constant="16" id="QvX-Me-L20"/>
+                            <constraint firstItem="UWA-Hh-jRH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sfi-qX-YxA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bdZ-oC-Vw7" secondAttribute="bottom" constant="84" id="YMz-tO-rlX"/>
+                            <constraint firstItem="UWA-Hh-jRH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bF8-yX-noi"/>
+                            <constraint firstItem="bdZ-oC-Vw7" firstAttribute="top" secondItem="b8W-Sv-IPE" secondAttribute="bottom" constant="94" id="bfH-Sh-znd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8W-Sv-IPE" secondAttribute="trailing" constant="47" id="e66-Ip-6IE"/>
+                            <constraint firstItem="UWA-Hh-jRH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gcn-lR-RFy"/>
+                            <constraint firstItem="b8W-Sv-IPE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="hJx-9h-3Sv"/>
+                            <constraint firstItem="1kJ-N6-Ump" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jvf-d2-g82"/>
+                            <constraint firstAttribute="bottom" secondItem="UWA-Hh-jRH" secondAttribute="bottom" id="kIF-Va-DZu"/>
+                            <constraint firstItem="b8W-Sv-IPE" firstAttribute="top" secondItem="1kJ-N6-Ump" secondAttribute="bottom" constant="8" symbolic="YES" id="nGk-kq-rn1"/>
+                            <constraint firstItem="bdZ-oC-Vw7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="z0I-Ls-Vk5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="b8W-Sv-IPE" id="8nt-U6-SFy"/>
+                        <outlet property="rollButton" destination="bdZ-oC-Vw7" id="p6Q-lY-ocp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1980" height="1200"/>
+        <image name="Dice1" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
